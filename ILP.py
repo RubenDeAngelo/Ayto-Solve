@@ -41,6 +41,15 @@ def solve_with_cbc(data):
                         prob += matches[i, m1] + matches[i, m2] <= 2
         for j in range(M):
             prob += lp.lpSum(matches[i, j] for i in range(W)) == 1
+        # Every woman must have at least 1 match (pigeonhole alone doesn't guarantee this)
+        for i in range(W):
+            prob += lp.lpSum(matches[i, j] for j in range(M)) >= 1
+        # If a regular man is confirmed matched to a woman, the double man cannot also match that woman
+        for decision in data['matchbox_decisions']:
+            woman = women_index[decision['woman']]
+            man = men_index[decision['man']]
+            if decision['is_match'] and man != double_match_idx:
+                prob += matches[woman, double_match_idx] == 0
 
     if is_men_smaller:
         double_match_idx = women_index[double_match]
@@ -53,6 +62,12 @@ def solve_with_cbc(data):
                         prob += matches[w1, j] + matches[w2, j] <= 2
         for i in range(W):
             prob += lp.lpSum(matches[i, j] for j in range(M)) == 1
+        # If a regular woman is confirmed matched to a man, the double-match woman cannot also match that man
+        for decision in data['matchbox_decisions']:
+            woman = women_index[decision['woman']]
+            man = men_index[decision['man']]
+            if decision['is_match'] and woman != double_match_idx:
+                prob += matches[double_match_idx, man] == 0
 
     if W == M:
         for j in range(M):
@@ -87,8 +102,13 @@ def solve_with_cbc(data):
             current_solution = np.array([[int(matches[i, j].varValue) for j in range(M)] for i in range(W)])
             solutions.append(current_solution)
 
-            # Add a constraint to exclude this solution in future iterations
-            prob += lp.lpSum(matches[i, j] * (1 - current_solution[i, j]) for i in range(W) for j in range(M)) <= W * M - 1
+            # Exclude this solution: at least one currently-matched pair must differ
+            num_ones = int(current_solution.sum())
+            prob += lp.lpSum(
+                matches[i, j]
+                for i in range(W) for j in range(M)
+                if current_solution[i, j] == 1
+            ) <= num_ones - 1
         else:
             break  # No more solutions found
 
@@ -98,8 +118,24 @@ def solve_with_cbc(data):
 start_time = time.time()
 print(f"start time:", time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime(time.time())))
 data = load_data('season_february25.json')
-solutions, women_names, men_names = solve_with_cbc(data)
-print("My program took", time.time() - start_time, "s / ", (time.time() - start_time) / 60, "m to run")
+
+double_match_field = data['participants']['double_match']
+double_match_list = double_match_field if isinstance(double_match_field, list) else [double_match_field]
+
+solutions = []
+seen_solutions = set()
+
+for double_match in double_match_list:
+    temp_data = json.loads(json.dumps(data))
+    temp_data['participants']['double_match'] = double_match
+    new_solutions, women_names, men_names = solve_with_cbc(temp_data)
+    for sol in new_solutions:
+        sol_tuple = tuple(map(tuple, sol))
+        if sol_tuple not in seen_solutions:
+            seen_solutions.add(sol_tuple)
+            solutions.append(sol)
+
+print(f"My program took {time.time() - start_time:.2f} s / {(time.time() - start_time) / 60:.2f} m to run")
 
 if solutions:
     print(f"Found {len(solutions)} feasible solutions.")

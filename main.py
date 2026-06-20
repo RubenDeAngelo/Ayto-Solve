@@ -118,7 +118,8 @@ class AllSolutionsCollector(cp_model.CpSolverSolutionCallback):
 start_time = time.time()
 
 data = load_data('season_february25.json')
-double_match_list = data['participants']['double_match']
+double_match_field = data['participants']['double_match']
+double_match_list = double_match_field if isinstance(double_match_field, list) else [double_match_field]
 
 solutions = []
 seen_solutions = set()
