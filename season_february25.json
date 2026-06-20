@@ -1,0 +1,195 @@
+{
+  "participants": {
+    "women": [
+      "Anna",
+      "Camelia",
+      "Chiara",
+      "Deisy",
+      "Ina",
+      "Joanna",
+      "Nadja",
+      "Nasti",
+      "Selina",
+      "Sophia",
+      "Tori"
+    ],
+    "men": [
+      "Danish",
+      "Dino",
+      "Dion",
+      "Enes",
+      "Josh",
+      "Joshua",
+      "Kaan",
+      "Levin",
+      "Sinan",
+      "Tano"
+    ],
+    "double_match": [
+      "Camelia",
+      "Joanna",
+      "Sophia"]
+  },
+  "matching_nights": [
+    {
+      "matches": {
+        "Anna": "Enes",
+        "Camelia": "Levin",
+        "Chiara": "Tano",
+        "Deisy": "Dino",
+        "Ina": "Sinan",
+        "Joanna": "Kaan",
+        "Nadja": "Josh",
+        "Nasti": "None",
+        "Selina": "Joshua",
+        "Sophia": "Danish",
+        "Tori": "Dion"
+      },
+      "correct_matches": 2
+    },
+    {
+    "matches": {
+        "Anna": "Kaan",
+        "Camelia": "Danish",
+        "Chiara": "Levin",
+        "Deisy": "Dino",
+        "Ina": "Sinan",
+        "Joanna": "Joshua",
+        "Nadja": "Josh",
+        "Nasti": "Enes",
+        "Selina": "Dion",
+        "Sophia": "None",
+        "Tori": "Tano"
+      },
+      "correct_matches": 3
+    },
+    {
+    "matches": {
+        "Anna": "Kaan",
+        "Camelia": "Levin",
+        "Chiara": "Dion",
+        "Deisy": "Dino",
+        "Ina": "None",
+        "Joanna": "Joshua",
+        "Nadja": "Josh",
+        "Nasti": "Sinan",
+        "Selina": "Enes",
+        "Sophia": "Danish",
+        "Tori": "Tano"
+      },
+      "correct_matches": 4
+    },
+    {
+    "matches": {
+        "Anna": "Kaan",
+        "Camelia": "Levin",
+        "Chiara": "None",
+        "Deisy": "Dino",
+        "Ina": "Josh",
+        "Joanna": "Joshua",
+        "Nadja": "Danish",
+        "Nasti": "Dion",
+        "Selina": "Enes",
+        "Sophia": "Sinan",
+        "Tori": "Tano"
+      },
+      "correct_matches": 4
+    },
+    {
+    "matches": {
+        "Anna": "None",
+        "Camelia": "Levin",
+        "Chiara": "Dion",
+        "Deisy": "Dino",
+        "Ina": "Josh",
+        "Joanna": "Joshua",
+        "Nadja": "Danish",
+        "Nasti": "Sinan",
+        "Selina": "Enes",
+        "Sophia": "Kaan",
+        "Tori": "Tano"
+      },
+      "correct_matches": 4
+    },
+    {
+    "matches": {
+        "Anna": "Dion",
+        "Camelia": "Sinan",
+        "Chiara": "Levin",
+        "Deisy": "Dino",
+        "Ina": "Joshua",
+        "Joanna": "None",
+        "Nadja": "Danish",
+        "Nasti": "Josh",
+        "Selina": "Enes",
+        "Sophia": "Kaan",
+        "Tori": "Tano"
+      },
+      "correct_matches": 5
+    },
+    {
+    "matches": {
+        "Anna": "Tano",
+        "Camelia": "Josh",
+        "Chiara": "Levin",
+        "Deisy": "Dino",
+        "Ina": "None",
+        "Joanna": "Joshua",
+        "Nadja": "Danish",
+        "Nasti": "Sinan",
+        "Selina": "Kaan",
+        "Sophia": "Enes",
+        "Tori": "Dion"
+      },
+      "correct_matches": 6
+    },
+    {
+    "matches": {
+        "Anna": "Joshua",
+        "Camelia": "Josh",
+        "Chiara": "Dion",
+        "Deisy": "Dino",
+        "Ina": "Levin",
+        "Joanna": "Tano",
+        "Nadja": "Danish",
+        "Nasti": "Sinan",
+        "Selina": "Kaan",
+        "Sophia": "Enes",
+        "Tori": "None"
+      },
+      "correct_matches": 5
+    }
+  ],
+  "matchbox_decisions": [
+    {
+      "woman": "Anna",
+      "man": "Josh",
+      "is_match": false
+    },
+    {
+      "woman": "Ina",
+      "man": "Sinan",
+      "is_match": false
+    },
+    {
+      "woman": "Nadja",
+      "man": "Danish",
+      "is_match": true
+    },
+    {
+      "woman": "Deisy",
+      "man": "Dino",
+      "is_match": true
+    },
+    {
+      "woman": "Sophia",
+      "man": "Kaan",
+      "is_match": false
+    },
+    {
+      "woman": "Joanna",
+      "man": "Joshua",
+      "is_match": false
+    }
+  ]
+}

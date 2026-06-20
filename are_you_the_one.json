@@ -1,0 +1,176 @@
+{
+  "participants": {
+    "women": [
+      "Anastasia",
+      "Asena",
+      "Emmy",
+      "Gabriela",
+      "Jennifer",
+      "Laura L.",
+      "Laura M.",
+      "Linda",
+      "Nadja",
+      "Tara",
+      "Dana"
+    ],
+    "men": [
+      "Alex",
+      "Antonino",
+      "Chris",
+      "Kaan",
+      "Lars",
+      "Lukas",
+      "Marc-Robin",
+      "Nikola",
+      "Ozan",
+      "Tim"
+    ],
+    "double_match": "Dana"
+  },
+  "matching_nights": [
+    {
+      "matches": {
+        "Anastasia": "Marc-Robin",
+        "Asena": "Kaan",
+        "Emmy": "Chris",
+        "Gabriela": "Ozan",
+        "Jennifer": "Lukas",
+        "Laura L.": "Alex",
+        "Laura M.": "Antonino",
+        "Linda": "Tim",
+        "Nadja": "Lars",
+        "Tara": "Nikola",
+        "Dana": "None"
+      },
+      "correct_matches": 2
+    },
+    {
+      "matches": {
+        "Anastasia": "Lars",
+        "Asena": "Marc-Robin",
+        "Emmy": "Chris",
+        "Gabriela": "None",
+        "Jennifer": "Alex",
+        "Laura L.": "Ozan",
+        "Laura M.": "Lukas",
+        "Linda": "Tim",
+        "Nadja": "Kaan",
+        "Tara": "Nikola",
+        "Dana": "Antonino"
+      },
+      "correct_matches": 3
+    },
+    {
+      "matches": {
+        "Anastasia": "Alex",
+        "Asena": "Marc-Robin",
+        "Emmy": "Chris",
+        "Gabriela": "Lars",
+        "Jennifer": "Kaan",
+        "Laura L.": "Nikola",
+        "Laura M.": "Ozan",
+        "Linda": "Lukas",
+        "Nadja": "Antonino",
+        "Tara": "None",
+        "Dana": "Tim"
+      },
+      "correct_matches": 3
+    },
+    {
+      "matches": {
+        "Anastasia": "Nikola",
+        "Asena": "Kaan",
+        "Emmy": "Chris",
+        "Gabriela": "Lukas",
+        "Jennifer": "Alex",
+        "Laura L.": "Tim",
+        "Laura M.": "Ozan",
+        "Linda": "Marc-Robin",
+        "Nadja": "Antonino",
+        "Tara": "Lars",
+        "Dana": "None"
+      },
+      "correct_matches": 1
+    },
+    {
+      "matches": {
+        "Anastasia": "Marc-Robin",
+        "Asena": "Antonino",
+        "Emmy": "Chris",
+        "Gabriela": "Alex",
+        "Jennifer": "Lukas",
+        "Laura L.": "Nikola",
+        "Laura M.": "None",
+        "Linda": "Tim",
+        "Nadja": "Lars",
+        "Tara": "Kaan",
+        "Dana": "Ozan"
+      },
+      "correct_matches": 5
+    },
+    {
+      "matches": {
+        "Anastasia": "Ozan",
+        "Asena": "Antonino",
+        "Emmy": "Chris",
+        "Gabriela": "Alex",
+        "Jennifer": "Lukas",
+        "Laura L.": "None",
+        "Laura M.": "Marc-Robin",
+        "Linda": "Tim",
+        "Nadja": "Nikola",
+        "Tara": "Kaan",
+        "Dana": "Lars"
+      },
+      "correct_matches": 6
+    },
+     {
+      "matches": {
+        "Anastasia": "Ozan",
+        "Asena": "Antonino",
+        "Emmy": "Chris",
+        "Gabriela": "Alex",
+        "Jennifer": "None",
+        "Laura L.": "Lars",
+        "Laura M.": "Marc-Robin",
+        "Linda": "Tim",
+        "Nadja": "Nikola",
+        "Tara": "Kaan",
+        "Dana": "Lukas"
+      },
+      "correct_matches": 6
+    }
+  ],
+  "matchbox_decisions": [
+    {
+      "woman": "Laura L.",
+      "man": "Marc-Robin",
+      "is_match": false
+    },
+    {
+      "woman": "Emmy",
+      "man": "Chris",
+      "is_match": true
+    },
+    {
+      "woman": "Dana",
+      "man": "Chris",
+      "is_match": false
+    },
+    {
+      "woman": "Asena",
+      "man": "Marc-Robin",
+      "is_match": false
+    },
+     {
+      "woman": "Anastasia",
+      "man": "Ozan",
+      "is_match": true
+    },
+    {
+      "woman": "Dana",
+      "man": "Ozan",
+      "is_match": false
+    }
+  ]
+}
